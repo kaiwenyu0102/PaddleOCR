@@ -301,6 +301,7 @@ def main(args):
 
 if __name__ == "__main__":
     args = parse_args()
+    logger.debug(f"* args: {args}")
     if args.use_mp:
         p_list = []
         total_process_num = args.total_process_num
