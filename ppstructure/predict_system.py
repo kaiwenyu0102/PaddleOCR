@@ -27,6 +27,7 @@ import numpy as np
 import time
 import logging
 from copy import deepcopy
+import pdb
 
 from ppocr.utils.utility import get_image_file_list, check_and_read
 from ppocr.utils.logging import get_logger
@@ -252,6 +253,7 @@ def main(args):
         all_res = []
         for index, img in enumerate(imgs):
             res, time_dict = structure_sys(img, img_idx=index)
+            pdb.set_trace()
             img_save_path = os.path.join(save_folder, img_name,
                                          'show_{}.jpg'.format(index))
             os.makedirs(os.path.join(save_folder, img_name), exist_ok=True)
